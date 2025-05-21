@@ -1,0 +1,12 @@
+jaffle_shop:
+  outputs:
+    databricks_job:
+      type: databricks
+      method: http
+      catalog: dflores
+      schema: dbt_jaffle_shop
+      host: dbc-56f60291-144c.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/d540706fa6fdc8b5
+      token: "{{ env_var('DATABRICKS_TOKEN') }}"
+      
+  target: databricks_job
